@@ -5,6 +5,7 @@ var url = require("url");
 var StringDecoder = require("string_decoder").StringDecoder;
 var config = require("./config");
 var fs = require("fs");
+var handlers = require('./lib/handlers')
 
 //Instantiate the HTTP server
 var httpServer = http.createServer((req, res) => {
@@ -99,21 +100,9 @@ var unifiedServer = function(req, res) {
   });
 };
 
-//Handlers
-var handlers = {};
-
-//Sample handler
-handlers.ping = (data, callback) => {
-  //Callback HTTP status code and payload object
-  callback(200);
-};
-
-//Not found handler
-handlers.notFound = (data, callback) => {
-  callback(404);
-};
 
 //Define a request router
 var router = {
-  ping: handlers.ping
+  ping: handlers.ping,
+  users: handlers.users
 };
