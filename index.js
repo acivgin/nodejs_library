@@ -6,6 +6,7 @@ var StringDecoder = require("string_decoder").StringDecoder;
 var config = require("./config");
 var fs = require("fs");
 var handlers = require('./lib/handlers')
+var helpers = require('./lib/helpers')
 
 //Instantiate the HTTP server
 var httpServer = http.createServer((req, res) => {
@@ -73,7 +74,7 @@ var unifiedServer = function(req, res) {
       queryStringObject: queryStringObject,
       method: method,
       headers: headers,
-      payload: buffer
+      payload: helpers.parseJsonToObject(buffer)
     };
 
     //Route the request to the handler specified in the router
