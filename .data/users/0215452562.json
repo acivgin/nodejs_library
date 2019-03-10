@@ -1,7 +1,14 @@
 {
-  "firstName": "Sabina",
-  "lastName": "Civgin",
-  "phone": "0215452562",
-  "hashedPassword": "7848f80908c34d49f9f2f23ef630f07cc214fd44f71f106b3aafa1450eede321",
-  "tosAgreement": true
+    "firstName": "Sabina",
+    "lastName": "Civgin",
+    "phone": "0215452562",
+    "hashedPassword": "7848f80908c34d49f9f2f23ef630f07cc214fd44f71f106b3aafa1450eede321",
+    "tosAgreement": true,
+    "checks": [
+        "nfup2du56qrmd3sdreg6",
+        "x9xirct98gp4l8gindl9",
+        "rvd0mi3lf1rfu7tihpwb",
+        "whsq3q3lott7z2zgzb3q",
+        "2r8nzlyet89wz5el1mqj"
+    ]
 }
